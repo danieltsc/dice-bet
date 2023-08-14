@@ -13,7 +13,7 @@ In case you want to completely clear the database and repopulate it, open the .e
 ---
 
 ```
-FORCE_REFRESH_DB=false
+FORCE_REFRESH_DB=true
 NODE_ENV=development
 ```
 
