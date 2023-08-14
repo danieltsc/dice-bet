@@ -6,6 +6,17 @@ This is a basic dice betting API implemented using Node.js, TypeScript, Sequeliz
 
 These instructions will help you set up and run the project on your local machine.
 
+---
+
+In case you want to completely clear the database and repopulate it, open the .env file and set
+
+---
+
+```
+FORCE_REFRESH_DB=false
+NODE_ENV=development
+```
+
 ### Prerequisites
 
 - Node.js (v14 or later)
@@ -21,6 +32,7 @@ These instructions will help you set up and run the project on your local machin
 ```
 
 2. Install dependencies
+
 ```
 npm install
 ```
@@ -33,6 +45,7 @@ docker-compose up -d
 ```
 
 4. Run the project
+
 ```
 npm run start:dev
 ```
@@ -40,12 +53,14 @@ npm run start:dev
 ## API DOCUMENTATION
 
 Queries
-* getUser(id: Int): User - Get a user by ID.
-* getUserList: [User!] - Get a list of all users.
-* getBet(id: Int): Bet - Get a bet by ID.
-* getBetList: [Bet!] - Get a list of all bets.
-* getBestBetPerUser(limit: Int): [Bet!] - Get a distinct list of the best bet each user has made.
+
+- getUser(id: Int): User - Get a user by ID.
+- getUserList: [User!] - Get a list of all users.
+- getBet(id: Int): Bet - Get a bet by ID.
+- getBetList: [Bet!] - Get a list of all bets.
+- getBestBetPerUser(limit: Int): [Bet!] - Get a distinct list of the best bet each user has made.
 
 Mutations
-* createBet(userId: Int, betAmount: Float, chance: Float): Bet - Create a new bet.
-* createUser(name: String, balance: Float): User -  Create a new user.
+
+- createBet(userId: Int, betAmount: Float, chance: Float): Bet - Create a new bet.
+- createUser(name: String, balance: Float): User - Create a new user.
